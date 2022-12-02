@@ -12,6 +12,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: manga;
+    src: url(../fonts/manga-temple.regular.ttf);
+}
+
 label {
     width: 280px;
     display: inline-block;
@@ -56,7 +61,7 @@ textarea {
 
 #header_text {
     color: #DFE3E2ff;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:manga;
 }
 /* *************************************************************************************** */
 /* Login */
