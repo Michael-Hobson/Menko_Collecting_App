@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--My CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Menkos</title>
+</head>
+
+<body>
+    <div class="nav_display">
+        <h1 id="header_text">{{session['first_name']}}'s Dashboard</h1>
+    </div>
+    <div class="sidebar-left"></div>
+    <div class="sidebar-right"></div>
+    <div id="diplay_all_subhead">
+        <p><a href="/menko/new" id="create_link">+Create Menko</a></p>
+        <p><a href="/user/logout" class="">logout</a></p>
+    </div>
+    <div class="container2">
+        <div class="container3">
+            <p>All Menkos Database:</p>
+            <table class="table table-striped" id="all_menko_table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="table_set_year_name">Set Year | Name</th>
+                        <th scope="col" class="table_description">Description</th>
+                        <th scope="col" class="table_img_front">Menko Front Image</th>
+                        <th scope="col" class="table_img_back">Menko Back Image</th>
+                        <th scope="col" class="table_actions">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for menko in menko: %}
+                    <tr>
+                        <td>{{ menko.year }} | {{ menko.set_name }}</td>
+                        <td>{{ menko.description }}</td>
+                        <td><img src="{{ menko.img_front }}" alt="menko front" class="img_menko"></td>
+                        <td><img src="{{ menko.img_back }}" alt="menko back" class="img_menko"></td>
+                        <td><a href="/menko/{{menko.id}}">Show</a>
+                            {% if session['user_id'] == menko.user.id %}
+                            |<a href="/menko/edit/{{menko.id}}">Edit</a>|<a href="/menko/{{menko.id}}/delete">Delete</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <!--My JS-->
+    <script src="{{ url_for('static', filename='js/script.css') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+/* *************************************************************************************** */
+/* CSS HEX */
+/* --chinese-red: #B9391Cff;
+--battleship-grey: #7B807Aff;
+--smoky-black: #130F0Cff;
+--platinum: #DFE3E2ff;
+--french-bistre: #796A5Bff; */
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+label {
+    width: 280px;
+    display: inline-block;
+}
+
+input,
+select {
+    margin-bottom: 10px;
+}
+
+textarea {
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+/* *************************************************************************************** */
+/* Nav */
+.nav_display {
+    background-color: #B9391Cff;
+    height: 100px;
+    text-align: center;
+}
+
+.nav_display h1 {
+    padding-top: 20px;
+}
+
+.sidebar-left {
+    min-height: 100%;
+    width: 150px;
+    position: absolute;
+    left: 0;
+    background-color: #7B807Aff;
+}
+
+.sidebar-right {
+    min-height: 100%;
+    width: 150px;
+    position: absolute;
+    right: 0;
+    background-color: #7B807Aff;
+}
+
+#header_text {
+    color: #DFE3E2ff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* *************************************************************************************** */
+/* Login */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#form_login {
+    margin-left: 60px;
+}
+
+#login_inputs {
+    width: 180px;
+    display: inline-block;
+}
+
+#login_spacing {
+    margin-left: 20px;
+}
+
+.make_text_white {
+    color: white;
+}
+
+/* *************************************************************************************** */
+/* Images */
+.img_menko {
+    width: 100px;
+    height: auto;
+}
+
+.img_menko_display {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+}
+
+#img_a {
+    width: 1000px;
+    height: auto;
+}
+
+#img_b {
+    width: 820px;
+    height: 620px;
+    margin-left: 550px;
+}
+
+#img_c {
+    width: 820px;
+    height: 320px;
+    margin-left: 550px;
+    margin-top: 30px;
+}
+
+/* *************************************************************************************** */
+/* Display All Page */
+#diplay_all_subhead {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    margin-right: 175px;
+}
+
+#create_link {
+    padding-right: 10px;
+}
+
+.container3 {
+    margin-left: 175px;
+    margin-right: 175px;
+}
+
+#all_shows_table {
+    padding: 20px;
+    border: 2pt solid black;
+    text-align: center;
+}
+
+#container11 {
+    display: flex;
+    justify-content: center;
+}
+
+#body_container_1 {
+    display: flex;
+    margin: 25px;
+}
+
+#menko_history {
+    margin-left: 35px;
+}
+
+.container_edit {
+    display: flex;
+    margin-left: 300px;
+    margin-right: 175px;
+    margin-top: 40px;
+}
+
+#img_back_update {
+    margin-top: 60px;
+}
+
+th.table_set_year_name,
+th.table_actions {
+    width: 21%;
+}
+
+th.table_actions {
+    text-align: center;
+}
+
+th.table_img_front,
+th.table_img_back {
+    width: 9%;
+    text-align: center;
+}
+
+th.table_description {
+    width: 50%;
+}
+
+#menko_display_main {
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 30px;
+}
+
+#display_one_description {
+    margin-left: 400px;
+    margin-right: 400px;
+}

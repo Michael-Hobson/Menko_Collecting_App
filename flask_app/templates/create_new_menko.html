@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--My CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Add New Menko</title>
+</head>
+
+<body>
+    <div class="nav_display">
+        <h1 id="header_text">Add a New Menko!</h1>
+        <a href="/menko"  class="make_text_white">Back to Menkos</a>
+        <a href="/user/logout"class="make_text_white" id="login_spacing">Logout</a>
+    </div>
+    <div class="sidebar-left"></div>
+    <div class="sidebar-right"></div>
+    <div id="header">
+
+        
+    </div>
+    <div class="container">
+        <div>
+            <div>
+                <form class="container2" action="/menko/create" method="post" enctype="multipart/form-data">
+                    <div>
+                        <label for="set_name">Set Name: (if unknown, type unknown)</label>
+                        <input type="text" name="set_name">
+                        {% for message in get_flashed_messages( category_filter = ['error_menko_set_name']) %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <label for="year">Year Made: (if unknown, type unknown)</label>
+                        <input type="text" name="year">
+                        {% for message in get_flashed_messages( category_filter = ['error_menko_year']) %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <label for="type">Choose Menko Type:</label>
+                        <select name="type" id="type">
+                            <option value="Baseball">Baseball</option>
+                            <option value="Sumo">Sumo</option>
+                            <option value="Anime">Anime</option>
+                            <option value="Manga">Manga</option>
+                            <option value="Cartoon">Cartoon</option>
+                            <option value="Cowboys">Cowboys</option>
+                            <option value="Samurai">Samurai</option>
+                            <option value="Military">Military</option>
+                            <option value="Other">Other</option>
+                            <option value="Unknown">Unknown</option>
+                        </select>
+                        {% for message in get_flashed_messages( category_filter = ['error_menko_type']) %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <label for="description">Description:</label>
+                        <textarea rows="8" cols="70" name="description"></textarea>
+                        {% for message in get_flashed_messages( category_filter = ['error_menko_description']) %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <label for="img_front">Select Image of Front:</label>
+                        <input type="file" id="img_front" name="img_front">
+                        {% for message in get_flashed_messages( category_filter = ['error_menko_img_front']) %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    </div>
+                    <div>
+                        <label for="img_back">Select Image of Back:</label>
+                        <input type="file" id="img_back" name="img_back">
+                        {% for message in get_flashed_messages( category_filter = ['error_menko_img_back']) %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    </div>
+                    <input type="submit" value="Add" id="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+    <img src="/static/img/menko_line_2.jpg" alt="Menko images" id="img_c">
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <!--My JS-->
+    <script src="{{ url_for('static', filename='js/script.css') }}"></script>
+</body>
+
+</html>

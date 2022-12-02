@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!--My CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav_display">
+        <h1 id="header_text">Menko Collection Database</h1>
+        <a href="/login" class="make_text_white">Create Account</a>
+        <a href="/login"  class="make_text_white" id="login_spacing">Login</a>
+    </div>
+    
+    <div id="body_container_1">
+        <div>
+            <img src="/static/img/menko_collage_1.jpg" alt="Example of menko cards." id="img_a">
+        </div>
+        <div id="menko_history">
+            <div>
+                <h1>What is Menko?</h1>
+                <p>Menko (めんこ, 面子), also known as Bettan or Patchin, is a Japanese card game played by two or more players. It is also the
+                name of the type of cards used to play this game. Each player uses Menko cards made from thick paper or cardboard,
+                printed on one or both sides with images from anime, manga, sports, and other works. A player's card is placed on the hardwood
+                or concrete floor, and the other player throws down his card, trying to flip the other player's card with a gust of wind
+                or by striking his card against the other card. If the player succeeds, they take both cards. The player who takes all the cards,
+                or the one with the most cards at the game's end, wins the game.
+                </p>
+        
+                <p>The pictures on these cards reflect the popular culture of their time, and Menko cards from the past reflect important
+                information about their era. In the Edo and early Meiji period, images like ninja and samurai were popular. Before World
+                War II, the most popular images were of the military, like fighter planes and battleships. After the war, characters
+                from anime and manga were popular, as well as baseball players. Collectors of Japanese baseball cards collect baseball
+                menko.
+                </p>
+            </div>
+            <div>
+                <h1>What is this site all about?</h1>
+                <p>Menko collecting in the United States, and even in Japan, has not had the same kind of widespread collecting culture that
+                other similar hobbies have. Sports cards, tobacco cards, Pokemon, Magic: The Gathering, and others have had a long history of
+                collectors who have compiled information on all the cards in their respective genre. This site is an attempt to bring menko
+                collectors together to begin building out a database of cards.
+                </p>
+
+                <p>If you're a menko collector, create an account and start submitting information and images about your cards. Not only will you
+                have an online record of your own collection, you'll also be helping to build out the history of menko cards for all current and
+                future collectors.
+                </p>
+            </div>
+            <a href="/login">Create Account</a>
+            <a href="/login">Login</a>
+        </div>
+    </div>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <!--My JS-->
+    <script src="{{ url_for('static', filename='js/script.css') }}"></script>
+</body>
+
+</html>
